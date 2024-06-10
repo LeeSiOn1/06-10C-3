@@ -1,0 +1,362 @@
+  * {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+  }
+  body, html {
+    background-color: #ffffff;
+    color: #333333;
+    min-width: 1000px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  img {
+    border: none;
+  }
+  li {
+    list-style: none;
+  }
+  #wrap {
+    margin: 0 auto;
+    width: 1000px;
+  }
+  .cf::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  /*로고 및 슬라이드 컨테이너 시작부분*/
+  #header-and-slide {
+    display: flex;
+  }
+  /*로고 시작부분*/
+  #header {
+    width: 200px;
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+  #header img {
+    width: 200px;
+    aspect-ratio: 3/1;
+  }
+  /*로고 끝부분*/
+  /*메인메뉴 시작부분*/
+  #header .nav {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-top: 40px;
+  }
+  #header .nav > ul > li {
+    height: 25%;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  #header .nav li {
+    height: 30px;
+    line-height: 20px;
+  }
+  #header .nav a {
+    display: block;
+    font-size: 25px;
+    padding: 8px;
+  }
+  #header .nav > ul li:hover > a {
+    color: aquamarine;
+    background-color: cadetblue;
+  }
+  /*메인메뉴 끝부분*/
+  /*서브메뉴 시작부분*/
+  #header .mainmenu > li > .submenu {
+    width: 200px;
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    margin-top: -36px;
+    padding-left: 200px;
+    z-index: 2;
+  }
+  #header .mainmenu > li:hover > .submenu {
+    display: block;
+  }
+  #header .mainmenu > li > .submenu > li {
+    background-color: lightseagreen;
+    color: #ffffff;
+  }
+  #header .mainmenu > li > .submenu > li:hover > a {
+    background-color: darkslategray;
+    color: #ffffff;
+  }
+  /*서브메뉴 끝부분*/
+  /*슬라이드 시작부분*/
+  #slide {
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+  .slide-container {
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+  }
+  .slide-cont {
+    position: absolute;
+    width: 2400px;
+    height: 350px;
+    transition: left 0.6s ease;
+    z-index: 1;
+  }
+  .slide-item {
+    float: left;
+    width: 800px;
+    height: 350px;
+    position: relative;
+  }
+  .slide-item img {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-item h2 {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  .slide-item.active h2 {
+    animation: fadeIn 1s forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /*슬라이드 끝*/
+  /*공지사항 부분 시작*/
+  #contents {
+    width: 800px;
+    height: 200px;
+    padding-left:220px ;
+  }
+  #contents > div {
+    float: left;
+  }
+  #contents .cont1 {
+    width: 40%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: black;
+  }
+
+  #contents .cont1 h2 {
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+    float: left;
+  }
+
+  #contents .cont1 ul {
+    margin-top: 10px;
+  }
+
+  #contents .cont1 ul li {
+    font-size: 10px;
+    line-height: 20px;
+    list-style: none;
+    border: 1px solid #ffffff;
+  }
+
+  #contents .cont1 p  {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  #contents .cont1 p span {
+    float: right;
+    padding-right: 10px;
+  }
+
+  #contents .cont1 li span {
+    float: right;
+  }
+  /*공지사항 부분 끝*/
+  /*갤러리 부분 시작*/
+  #contents .cont2 {
+    width: 33%;
+    float: left;
+    height: 200px;
+  } 
+
+  #contents .cont2 h2 {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 10px;
+  }
+
+  #contents .cont2 img {
+    width: 28%;
+    float: left;
+    height: 100px;
+    margin-top:10px;
+    padding: 4px;
+  }
+  #contents .cont2 img:hover {
+    opacity: 0.7;
+  }
+  /*갤러리 부분 끝*/
+  /*베너 부분 시작*/
+  #contents .cont3 {
+    width: 24.5%;
+    height: 200px;
+    float: left;
+    position: relative; 
+  }
+
+  #contents .cont3 img {
+    width: 100%;
+    height: 150px;
+  }
+  #contents .cont3 h2 {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    padding: 7px;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #contents .cont3 h3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    color:aliceblue;
+    font-size: 13px;
+  }
+
+  #contents .cont3 .btn1 {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 60px;
+    height: 25px;
+    background-color: black;
+    color:white;
+  }
+  /*베너부분 끝*/
+  /*푸터부분시작*/
+  #footer {
+    margin-top: -40px;
+    margin-left: 200px;
+    width: 800px;
+    height: 100px;
+    position: relative;
+    background-color: black;
+  }
+
+  #footer > div {
+    float: left;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+
+  #footer #foot1 {
+    padding-left: 10px;
+    padding-top: 0px;
+  }
+
+  #footer img {
+    margin-top: -20px;
+    width: 100px;
+    height: 80px;
+  }
+  /*푸터 로고부분 끝*/
+  /*푸터 주소부분 시작*/
+  #footer #foot2 {
+    width: 620px;
+    padding-left: 10px;
+    font-size: 12px;
+    color:#ffffff;
+  } 
+
+  .layer-pop {
+    background: black; 
+    width:100%; 
+    height:100%; 
+    position: absolute; 
+    left:0; 
+    top:0; 
+    display: none;
+    z-index: 3;
+  }
+
+  .popup {
+    width:600px; 
+    height:500px; 
+    background: white; 
+    border:1px solid gray; 
+    padding: 50px; 
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform: 
+    translate(-50%,-50%); 
+    display: none;
+    z-index: 4;
+  }
+  .popup h2  {
+    font-size: 25px
+  }
+
+  .popup p {
+    margin-top:30px; 
+    font-size: 0.5em; 
+    line-height: 140%;
+  }
+  
+  .popup .popImg {
+    text-align: center;
+  }
+
+  .popup .butt {
+    background: black; 
+    text-align: center; 
+    width:70px; 
+    height:30px; 
+    line-height: 30px; 
+    position:absolute; 
+    bottom:30px; 
+    left:50%; 
+    transform: translate(-50%);
+  }
+  
+  .popup .butt a {
+    color:white; 
+  }
+
